@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros | Gimnasio Los Ríos</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            font-family: 'segoe ui', tahoma, geneva, verdana, sans-serif; 
+            line-height: 1.6; 
+            color: #ffffff; 
+            background-color: #000000; 
+            padding-bottom: 20px; 
+        }
+
+        a { text-decoration: none; color: inherit; }
+
+        header { 
+            background-color: #000000; 
+            color: #ffffff; 
+            padding: 1rem 2rem; 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+            border-bottom: 2px solid #ff3131;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .header-logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .gym-logo {
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+            border-radius: 50%;
+            background-color: #000000;
+        }
+
+        .brand-title {
+            font-size: 1.3rem;
+            color: #ff3131;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
+
+        nav ul { list-style: none; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+        nav a { color: #ffffff; font-weight: 600; text-transform: uppercase; font-size: 0.95rem; padding: 0.5rem 1rem; border-radius: 4px; transition: background 0.3s, color 0.3s; }
+        nav a:hover, nav a.active { background-color: #ff3131; color: #000000; }
+
+        .container { max-width: 1100px; margin: 2rem auto; padding: 0 1.5rem; display: grid; grid-template-columns: 2.5fr 1fr; gap: 2rem; }
+        section, aside { background: #000000; padding: 2rem; border-radius: 8px; margin-bottom: 2rem; border: 1px solid #737373; box-shadow: 0 4px 6px rgba(0,0,0,0.5); }
+        
+        h1, h2, h3 { color: #ffffff; margin-bottom: 1rem; }
+        h1 { font-size: 2rem; border-bottom: 3px solid #ff3131; padding-bottom: 0.5rem; color: #ff3131; }
+        h3 { font-size: 1.2rem; color: #ff3131; }
+        p { margin-bottom: 1rem; color: #ffffff; }
+
+        blockquote { background-color: #000000; border-left: 5px solid #ff3131; padding: 1rem; margin: 1rem 0; font-style: italic; color: #737373; border-radius: 0 4px 4px 0; }
+        mark { background-color: #ff3131; color: #000000; padding: 0.2rem 0.5rem; font-weight: bold; border-radius: 3px; }
+
+        table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
+        table, th, td { border: 1px solid #737373; }
+        th, td { padding: 10px; text-align: left; }
+        th { background-color: #737373; color: #000000; font-weight: bold; }
+        td { color: #ffffff; }
+
+        .services-figure {
+            display: grid;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-bottom: 3px solid #ff3131;
+            border-radius: 4px;
+        }
+
+        form label { color: #ffffff; display: block; margin-top: 10px; }
+        form input[type="text"], form input[type="email"], form select, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            background-color: #000000;
+            border: 1px solid #737373;
+            color: #ffffff;
+            border-radius: 4px;
+        }
+
+        form input[type="submit"] {
+            background-color: #ff3131;
+            color: #000000;
+            font-weight: bold;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            cursor: pointer;
+            margin-top: 15px;
+            border-radius: 4px;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #737373;
+            color: #ffffff;
+        }
+
+        aside h2 { border-bottom: 2px solid #737373; padding-bottom: 0.4rem; color: #ff3131; }
+        dl dt { font-weight: bold; color: #ff3131; margin-top: 1rem; font-size: 1.05rem; }
+        dl dd { margin-left: 0; margin-bottom: 0.5rem; color: #737373; font-size: 0.95rem; }
+
+        footer { text-align: center; padding: 1.5rem; background-color: #000000; color: #737373; margin-top: 2rem; border-top: 1px solid #737373; }
+
+        @media (max-width: 768px) { 
+            header { flex-direction: column; text-align: center; }
+            .container { grid-template-columns: 1fr; } 
+            nav ul { flex-direction: column; align-items: center; gap: 0.5rem; } 
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-logo-container">
+            <img src="https://lh3.googleusercontent.com/d/1X1gO3Yk6b2a0T8y4R5w2n8A7k9m_L1qX" alt="GYM POWER FITNESS CENTER Logo" class="gym-logo">
+            <span class="brand-title">GYM POWER FITNESS CENTER</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="gympowerfitnesscenter.html">Inicio</a></li>
+                <li><a href="sobrenosotrosgympowerfitnesscenter.html" class="active">Sobre Nosotros</a></li>
+                <li><a href="entrenadores.html">Entrenadores</a></li>
+                <li><a href="clasesydatos.html">Clases y Ubicación</a></li>
+                <li><a href="contactos.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main>
+            <section id="sobre-nosotros">
+                <h1>Nuestra Historia, Misión y Filosofía</h1>
+
+                <article>
+                    <h2>Origen e Identidad en Los Ríos</h2>
+                    <p><b>Gimnasio Los Ríos</b> nace de la visión de crear un espacio de entrenamiento auténtico, accesible y motivador para la comunidad del sector Los Ríos en Santo Domingo, Distrito Nacional. Bajo la dirección general de <b>Junior Castillo</b>, el proyecto se consolidó como una alternativa enfocada en jóvenes y adultos (de 16 a 40 años) que buscan una transformación real de su salud física y mental.</p>
+                    <p>A diferencia de los gimnasios franquiciados o corporativos donde los usuarios suelen ser anónimos, en Gimnasio Los Ríos fomentamos un <strong>ambiente familiar y colaborativo</strong> donde cada socio recibe acompañamiento técnico y palabras de aliento desde el primer día.</p>
+                    
+                    <blockquote>"Nuestra prioridad no es llenar un local de máquinas, sino garantizar que cada persona que cruce nuestra puerta encuentre la orientación y el ambiente adecuado para no rendirse." - <i>Junior Castillo (Gerente General)</i></blockquote>
+                </article>
+
+                <article>
+                    <h2>Misión y Visión</h2>
+                    <h3>Nuestra Misión</h3>
+                    <p>Promover el bienestar integral de la comunidad de Los Ríos ofreciendo instalaciones equipadas con pesas libres, máquinas de fuerza y clases colectivas dinámicas, respaldadas por un equipo técnico dedicado a guiar la biomecánica de cada movimiento de forma segura.</p>
+
+                    <h3>Nuestra Visión</h3>
+                    <p>Consolidarnos como el centro de acondicionamiento físico más respetado y cercano del sector, reconocido por su compromiso con los resultados de sus miembros, la disciplina y el espíritu de comunidad.</p>
+                </article>
+
+                <article>
+                    <h2>Nuestros Pilares y Valores</h2>
+                    <p>La cultura de trabajo dentro de nuestras instalaciones se rige por cuatro valores fundamentales:</p>
+                    <ul class="valores-list">
+                        <li><b>Atención Personalizada:</b> Presencia constante de entrenadores en sala para corregir la ejecución de los ejercicios.</li>
+                        <li><b>Comunidad y Respeto:</b> Un clima de convivencia enfocado en el apoyo mutuo entre todos los atletas y principiantes.</li>
+                        <li><b>Constancia y Disciplina:</b> Programas estructurados para asegurar que los progresos de fuerza y pérdida de grasa sean sostenibles.</li>
+                        <li><b>Higiene y Comodidad:</b> Espacios limpios, ventilados y ordenados para el óptimo desempeño de cada rutina.</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h2>Equipamiento e Infraestructura</h2>
+                    <p>El gimnasio cuenta con áreas diferenciadas para maximizar el rendimiento de cada sesión:</p>
+                    <p><b>Zona de Musculación y Peso Libre:</b> Equipada con mancuernas, barras olímpicas, bancas ajustables y máquinas selectorizadas para hipertrofia y acondicionamiento muscular.</p>
+                    <p><b>Salón de Clases Grupales:</b> Espacio acondicionado para sesiones aeróbicas intensas como Spinning e instrucción cardiovascular como Zumba.</p>
+                </article>
+            </section>
+        </main>
+
+        <aside>
+            <h2>Glosario Fitness</h2>
+            <dl>
+                <dt>Ambiente Familiar</dt>
+                <dd>Entorno comunitario enfocado en la empatía, el respeto y la motivación entre los miembros.</dd>
+
+                <dt>Acondicionamiento Físico</dt>
+                <dd>Desarrollo equilibrado de la resistencia, fuerza, flexibilidad y velocidad corporal.</dd>
+
+                <dt>Atención Personalizada</dt>
+                <dd>Supervisión continua por parte del staff para evitar lesiones y optimizar el rendimiento.</dd>
+
+                <dt>Biomecánica</dt>
+                <dd>Análisis del movimiento del cuerpo para ejecutar ejercicios con la técnica correcta.</dd>
+            </dl>
+        </aside>
+    </div>
+
+    <footer>
+        <p><small>&copy; Gimnasio Los Ríos, Santo Domingo. Gerencia: Junior Castillo. Todos los derechos reservados.</small></p>
+    </footer>
+
+</body>
+</html>

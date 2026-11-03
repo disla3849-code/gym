@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clases y Ubicación | Gimnasio Los Ríos</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+       body { 
+            font-family: 'segoe ui', tahoma, geneva, verdana, sans-serif; 
+            line-height: 1.6; 
+            color: #ffffff; 
+            background-color: #000000; 
+            padding-bottom: 20px; 
+        }
+
+        a { text-decoration: none; color: inherit; }
+
+        header { 
+            background-color: #000000; 
+            color: #ffffff; 
+            padding: 1rem 2rem; 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+            border-bottom: 2px solid #ff3131;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .header-logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .gym-logo {
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+            border-radius: 50%;
+            background-color: #000000;
+        }
+
+        .brand-title {
+            font-size: 1.3rem;
+            color: #ff3131;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
+
+        nav ul { list-style: none; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+        nav a { color: #ffffff; font-weight: 600; text-transform: uppercase; font-size: 0.95rem; padding: 0.5rem 1rem; border-radius: 4px; transition: background 0.3s, color 0.3s; }
+        nav a:hover, nav a.active { background-color: #ff3131; color: #000000; }
+
+        .container { max-width: 1100px; margin: 2rem auto; padding: 0 1.5rem; display: grid; grid-template-columns: 2.5fr 1fr; gap: 2rem; }
+        section, aside { background: #000000; padding: 2rem; border-radius: 8px; margin-bottom: 2rem; border: 1px solid #737373; box-shadow: 0 4px 6px rgba(0,0,0,0.5); }
+        
+        h1, h2, h3 { color: #ffffff; margin-bottom: 1rem; }
+        h1 { font-size: 2rem; border-bottom: 3px solid #ff3131; padding-bottom: 0.5rem; color: #ff3131; }
+        h3 { font-size: 1.2rem; color: #ff3131; }
+        p { margin-bottom: 1rem; color: #ffffff; }
+
+        blockquote { background-color: #000000; border-left: 5px solid #ff3131; padding: 1rem; margin: 1rem 0; font-style: italic; color: #737373; border-radius: 0 4px 4px 0; }
+        mark { background-color: #ff3131; color: #000000; padding: 0.2rem 0.5rem; font-weight: bold; border-radius: 3px; }
+
+        table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
+        table, th, td { border: 1px solid #737373; }
+        th, td { padding: 10px; text-align: left; }
+        th { background-color: #737373; color: #000000; font-weight: bold; }
+        td { color: #ffffff; }
+
+        .services-figure {
+            display: grid;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-bottom: 3px solid #ff3131;
+            border-radius: 4px;
+        }
+
+        form label { color: #ffffff; display: block; margin-top: 10px; }
+        form input[type="text"], form input[type="email"], form select, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            background-color: #000000;
+            border: 1px solid #737373;
+            color: #ffffff;
+            border-radius: 4px;
+        }
+
+        form input[type="submit"] {
+            background-color: #ff3131;
+            color: #000000;
+            font-weight: bold;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            cursor: pointer;
+            margin-top: 15px;
+            border-radius: 4px;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #737373;
+            color: #ffffff;
+        }
+
+        aside h2 { border-bottom: 2px solid #737373; padding-bottom: 0.4rem; color: #ff3131; }
+        dl dt { font-weight: bold; color: #ff3131; margin-top: 1rem; font-size: 1.05rem; }
+        dl dd { margin-left: 0; margin-bottom: 0.5rem; color: #737373; font-size: 0.95rem; }
+
+        footer { text-align: center; padding: 1.5rem; background-color: #000000; color: #737373; margin-top: 2rem; border-top: 1px solid #737373; }
+
+        @media (max-width: 768px) { 
+            header { flex-direction: column; text-align: center; }
+            .container { grid-template-columns: 1fr; } 
+            nav ul { flex-direction: column; align-items: center; gap: 0.5rem; } 
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-logo-container">
+            <img src="https://lh3.googleusercontent.com/d/1X1gO3Yk6b2a0T8y4R5w2n8A7k9m_L1qX" alt="GYM POWER FITNESS CENTER Logo" class="gym-logo">
+            <span class="brand-title">GYM POWER FITNESS CENTER</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="gympowerfitnesscenter.html">Inicio</a></li>
+                <li><a href="sobrenosotrosgympowerfitnesscenter.html">Sobre Nosotros</a></li>
+                <li><a href="entrenadores.html">Entrenadores</a></li>
+                <li><a href="clasesydatos.html" class="active">Clases y Ubicación</a></li>
+                <li><a href="contactos.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main>
+            <section id="clases-y-datos">
+                <h1>Clases Grupales y Horarios</h1>
+                <p>Organiza tu semana de entrenamiento consultando nuestras opciones de Spinning, Zumba y entrenamiento libre en sala de máquinas.</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Día / Horario</th>
+                            <th>Actividad</th>
+                            <th>Área / Salón</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Lunes a Viernes (Mañana/Noche)</td>
+                            <td>Clases Grupales de Spinning</td>
+                            <td>Salón de Ciclo Indoor</td>
+                        </tr>
+                        <tr>
+                            <td>Lunes, Miércoles y Viernes</td>
+                            <td>Clases de Zumba y Aeróbicos</td>
+                            <td>Salón de Clases Grupales</td>
+                        </tr>
+                        <tr>
+                            <td>Lunes a Sábado</td>
+                            <td>Musculación y Área de Máquinas</td>
+                            <td>Sala Principal de Pesas</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2>Ubicación en Google Maps</h2>
+                <p>Nos encontramos ubicados estratégicamente en el sector <b>Los Ríos, Santo Domingo, Distrito Nacional</b>:</p>
+                
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15132.887968596695!2d-69.9577!3d18.4965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ea560f6edeb85d7%3A0xb3cf51a0279d01!2sLos%20R%C3%ADos%2C%20Santo%20Domingo%2C%20Dominican%20Republic!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </section>
+        </main>
+
+        <aside>
+            <h2>Glosario Fitness</h2>
+            <dl>
+                <dt>Ciclo Indoor</dt>
+                <dd>Sesiones cardiovasculares sobre bicicletas estacionarias ajustables.</dd>
+                <dt>Entrenamiento Funcional</dt>
+                <dd>Ejercicios adaptados a los movimientos cotidianos para mejorar agilidad y balance.</dd>
+            </dl>
+        </aside>
+    </div>
+
+    <footer>
+        <p><small>&copy; Gimnasio Los Ríos, Santo Domingo. Gerencia: Junior Castillo. Todos los derechos reservados.</small></p>
+    </footer>
+
+</body>
+</html>
